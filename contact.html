@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Brigade Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <style>
+        .product-list {
+            padding: 5% 10%;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 6 items per row */
+            gap: 15px;
+            /* Space between items */
+        }
+
+        .product-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details h4 {
+            color: #111;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .product-details p {
+            color: #555;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo"><img src="Logo.png" alt="Brigade Store"></a>
+        <ul class="navmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="BOOKS.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div class="nav-icon">
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search..." class="hidden">
+                <button id="searchButton"><i class='bx bx-search-alt-2'></i></button>
+            </div>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <!--<a href="#"><i class='bx bx-cart'></i></a>-->
+        </div>
+        <div class="product-text">
+            <h5>^_~</h5>
+        </div>
+    </header>
+    <br><br><br><br>
+    <H2>Contact Us (Even For Urgent Queries or Personal Approach)</H2><br>
+    <center>
+        <div class="first-info">
+            <p class="Nerd">Noonmati, Guwahati, <br>Assam - 781020</p><br>
+            <p class="Nerd">Phone: +91 88226 75694</p><br>
+            <p class="Nerd">Email: hyeonteam23@gmail.com</p><br>
+            <a href="https://www.instagram.com/vandam._._/" class="Nerd"><p class="Nerd">Instagram: @vandam._._</p></a><br>
+        </div>
+        <br>
+        <h2>For Complaints Or Returns:</h2><br>
+<form action="https://formspree.io/f/xdkazwrb" class="form" id="form" method="POST">
+    <p>
+        We are intimately sorry T-T<span>But we'll do our 100% to keep you happy! 💪</span>
+    </p>
+    <input type="text" placeholder="Your Full Name" name="name" required><br>
+    <input type="email" placeholder="Your Email" name="name" required><br>
+    <input type="number" placeholder="Your Phone Number" name="phonenumber" required><br>
+    <input placeholder="Your Order Id If Returns*" name="name"><br>
+    <input type="text" placeholder="Subject Of Complaint" name="subject" required><br>
+    <input type="text" placeholder="Your Complain Here" name="complaint" required><br>
+    <select id="contactopt" class="ot" name="contactopt" required><br>
+        <option value="">How Do You Want To Be Contacted?</option>
+        <option>Call Assistance (Please mention time/date in your complain)</option>
+        <option>SMS and Whatsapp</option>
+        <option>Email</option>
+    </select>
+    <button class="oauthButton">
+                    Slap The Complaint
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 17 5-5-5-5"></path><path d="m13 17 5-5-5-5"></path></svg>
+                </button>
+</form>
+    </center>
+
+    <br><br>
+    <div class="end-text">
+        <p>©Brigade Store 2025. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

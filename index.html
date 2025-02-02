@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charcet="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Home - BrigadeStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="Logo.png" alt="Brigade Store"></a>
+        <ul class="navmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="BOOKS.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <!--<li><a href="#">Docs</a></li>-->
+        </ul>
+        <div class="nav-icon">
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search..." class="hidden">
+                <button id="searchButton"><i class='bx bx-search-alt-2'></i></button>
+            </div>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <!--<a href="#"><i class='bx bx-cart'></i></a>-->
+        </div>
+        <div class="product-text">
+            <h5>^_~</h5>
+        </div>
+    </header>
+    <div class="side-label2" onclick="toggleSidePanel()">Menu</div>
+    <!-- The Side Panel -->
+    <div id="side-panel" class="side-panel">
+        <div class="close-btn" onclick="toggleSidePanel()">×</div>
+        <h2>Navigate</h2>
+        <ul>
+            <a href="about.html#whyus">
+                <li>Why Us?</li>
+            </a>
+            <a href="about.html#about">
+                <li>About Us</li>
+            </a>
+            <a href="help.html">
+                <li>Help</li>
+            </a>
+            <a href="about.html#offer">
+                <li>Offers, Coupons& Sales</li>
+            </a>
+            <a href="sitemap.html">
+                <li>Site Map</li>
+            </a>
+            <a href="contact.html">
+                <li>Contact Us</li>
+            </a>
+            <!--<a href="contact.html#form">
+                <li>Request A Track For Your Order</li>
+            </a>-->
+            <a href="contact.html#form">
+                <li>Didn't Found What You're Looking For?</li>
+            </a>
+            <a href="privacypolicy.html">
+                <li>Privacy Policy</li>
+            </a>
+            <a href="t&c.html">
+                <li>Terms& Conditions</li>
+            </a>
+            <a href="https://vandam-sfsguwahati.github.io/sfsncc-digiportal.github.io/aboutthedev.html">
+                <li>About The Developer</li>
+            </a>
+            <!--<a href="blog.html">
+                <li>Blogs</li>
+            </a>--->
+        </ul>
+    </div>
+    <section class="main-home">
+        <div class="main-text">
+            <h5>Our Deals</h5>
+            <h1>Best Reads <br> The Right Price</h1>
+            <p>"Information Is Wealth"</p>
+
+            <a href="BOOKS.html" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <div class="down-arrow">
+            <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+        </div>
+    </section>
+
+    <!--TRENDING SECTION-->
+    <section class="tending-product" id="trending">
+        <div class="center-text">
+            <h2>Our Trending <span>Products</span></h2>
+        </div>
+
+        <div class="products">
+            Not Avaiable For Now ≧ ﹏ ≦
+        </div>
+    </section>
+
+    <!--FOOTER SECTION-->
+    <section class="contact" id="contact">
+        <div class="contact-info">
+            <div class="first-info">
+                <img src="Logo.png" alt="Brigade Store Logo">
+                <p>Noonmati, Guwahati, <br>Assam - 781020</p>
+                <p>+91 88226 75694</p>
+                <p>hyeonteam23@gmail.com</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bxl-gmail'></i></a>
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h4>Support</h4>
+                <p><a href="contact.html">Contact Us</a></p>
+                <p><a href="about.html">About Page</a></p>
+                <p><a href="privacypolicy.html">Privacy</a></p>
+            </div>
+
+            <div class="third-info">
+                <h4>Miscellaneous</h4>
+                <p><a href="https://vandam-sfsguwahati.github.io/sfsncc-digiportal.github.io/aboutthedev.html">About The
+                        Developer</a></p>
+                <p><a href="sitemap.html">Site Map</a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="end-text">
+        <p>©Brigade Store 2025. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

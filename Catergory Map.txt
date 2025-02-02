@@ -1,0 +1,32 @@
+BOOKS
+	Adventure!
+	Fantasy!
+	Fiction!
+	Horror!
+	Romance!
+	Dark Romance!
+	Shakespeare
+	Young Adult!
+	Gorenimo Stilton
+	Self Help !
+	Biographies& Autobiographies!
+	History!
+	Educationl!
+
+STATIONARIES
+	Pens& Others
+	Art& Craft Supplies
+	Diaries& Notepads
+
+OFFICE& HOME ORGANIZATION
+	Storage& Organization
+	Desk Decors
+	Posters& Prints
+
+MOBILE& OTHER ACCESSORIES
+	Headsets
+	Cases& Covers
+	Powerbanks
+	Cables& Chargers
+	Screen Guards
+			

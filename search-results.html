@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="Logo.png" alt="Brigade Store"></a>
+    </header>
+
+    <section class="search-results">
+        <h1>Search Results</h1>
+        <div id="results-container"></div>
+    </section>
+
+    <script>
+        const query = new URLSearchParams(window.location.search).get('q');
+        const resultsContainer = document.getElementById('results-container');
+
+        // Mock data - Replace with actual content fetching logic
+        const siteContent = [
+            { title: "Shop Page", url: "store.html", content: "Explore our products and deals." },
+            { title: "Contact Page", url: "index.html#contact", content: "Get in touch with us." },
+            { title: "Atomic Habits by James Clear", url: "SH001.html", content: "Atomic Habits by James Clear" },
+            { title: "The Psychology Of Money By Morgan Housel", url: "SH002.html", content: "The Psychology Of Money By Morgan Housel" },
+            { title: "Treasure Island By Robert Louis Stevenson", url: "AD001.html", content: "Treasure Island By Robert Louis Stevenson" },
+            { title: "[1] Harry Potter And the Philosopher’s Stone By J. K. Rowling", url: "AD002.html", content: "[1] Harry Potter And the Philosopher’s Stone By J. K. Rowling" },
+            { title: "[2] Harry Potter And The Chamber Of Secrets By J. K. Rowling", url: "AD003.html", content: "[2] Harry Potter And The Chamber Of Secrets By J. K. Rowling" },
+            { title: "[3] Harry Potter And The Prisoner Of Azkaban By J. K. Rowling", url: "AD004.html", content: "[3] Harry Potter And The Prisoner Of Azkaban By J. K. Rowling" },
+            { title: "[4] Harry Potter And The Goblet Of Fire By J. K. Rowling", url: "AD005.html", content: "[4] Harry Potter And The Goblet Of Fire By J. K. Rowling" },
+            { title: "[5] Harry Potter And The Order Of The Phoenix By J. K. Rowling", url: "AD006.html", content: "[5] Harry Potter And The Order Of The Phoenix By J. K. Rowling" },
+            { title: "[6] Harry Potter And The Half Blood Prince By J. K. Rowling", url: "AD007.html", content: "[6] Harry Potter And The Half Blood Prince By J. K. Rowling" },
+            { title: "[7] Harry Potter And The Deathly Hallows By J. K. Rowling", url: "AD008.html", content: "[7] Harry Potter And The Deathly Hallows By J. K. Rowling" },
+            { title: "Alice's Adventures In Wonderland By Lewis Carroll", url: "FS001.html", content: "Alice's Adventures In Wonderland By Lewis Carroll" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+            { title: "#", url: "#", content: "#" },
+        ];
+
+        if (query) {
+            const lowerCaseQuery = query.toLowerCase();
+            const results = siteContent.filter(item =>
+                item.title.toLowerCase().includes(lowerCaseQuery) ||
+                item.content.toLowerCase().includes(lowerCaseQuery)
+            );
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultItem = document.createElement('div');
+                    resultItem.innerHTML = `
+                        <h3><a href="${result.url}">${result.title}</a></h3>
+                        <p>${result.content}</p>
+                    `;
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+            }
+        } else {
+            resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Brigade Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="Logo.png">
+    <style>
+        .product-list {
+            padding: 5% 10%;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            /* 6 items per row */
+            gap: 15px;
+            /* Space between items */
+        }
+
+        .product-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-details h4 {
+            color: #111;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .product-details p {
+            color: #555;
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo"><img src="Logo.png" alt="Brigade Store"></a>
+        <ul class="navmenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="BOOKS.html">Shop</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+        <div class="nav-icon">
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search..." class="hidden">
+                <button id="searchButton"><i class='bx bx-search-alt-2'></i></button>
+            </div>
+            <a href="#"><i class='bx bx-user'></i></a>
+            <!--<a href="#"><i class='bx bx-cart'></i></a>-->
+        </div>
+        <div class="product-text">
+            <h5>^_~</h5>
+        </div>
+    </header>
+    <br>
+    <center>
+        <!--WHY US?-->
+        <section class="whyus" id="whyus">
+            <div class="card">
+                <div class="headd">Why Us?!</div>
+                <div class="content">
+                    ● <b>We take on-demand orders</b> that is, if you don't find what you look for, you can contact to us
+                    about it and it will be added to our store and sold to you exclusively. <b>With exclusive offer like no one else 
+                        will get for that particular book!
+                    </b><br><br>
+                    ● <b>Easy Returns,</b> we offer our customers an easy return with full money-back guarantee under
+                    <i>*24hour*</i> of
+                    order shipped to the customer.<br><br>
+                    ● <b>Cost friendly</b>, we are providing probably a reasonable prices that those "popular" online
+                    stores don't.
+                    Doubt this one? Check it your own! <br><br>
+                    ● <b>We are soon coming up with offers, sales and MYSTERY BOXES on occassions</b>, which of course
+                    will be
+                    otmost on our precious jolly smiles' favor. So do subscribe our newsletter and email FOR FREE.
+                    <br><br>
+                    ● <b>Aesthetic, Eco-friendly, clean-lovable and simple packaging</b>, for every order to make it
+                    special for every smile
+                    of our jolly customers and the mother nature. *I Vandam, personally want to encourage my people to
+                    love the nature
+                    and to take up a simpler approach towards every take. <br><br>
+                    ● <b>SPECIAL PACKAGING FOR BULK ORDERS</b> (more than 3books at a go).<br><br>
+                    ● <b>Personalized gifts for every order!</b> Yes, we value your smile. <3 *Love from Vandam ;)<br>
+                        <br>
+                        ● <b>Get offers on your birthdays</b> and other occassions that might align to your orders.
+                        <I>*only applicable if
+                            the occassion is on the same day and date of placing order</I>
+                        <br />
+                        <button class="button">~ UwU ~</button>
+                </div>
+            </div>
+        </section>
+        <!--ABOUT US-->
+        <section class="about" id="about">
+            <div class="formx-container">
+                <div class="formx">
+                    <span class="heading">About Us</span>
+                    <span class="c1">I am M Vandam Singha taking this startup on, with my co and heartfelt brother,
+                        Kunal Chhetry</span>
+                    <span class="c2">We here as BRIGADESTORE want to bring readers together, with common
+                        practices and of course a relaiable and affordable solution. For nothing in life is a perfect
+                        solution, we do not say it a 100% solution but yeah probably the most affordable in online
+                        mode in the subcontinent.<br></span>
+                    <span class="yu">For time and the world do not stand still, change is the law of life, and those who
+                        look only to
+                        past or the present, are certain to miss the future. I said, 'are certain to miss the
+                        future!'</span>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+        <!--OFFERS, COUPONS AND SALES-->
+        <section class="offer" id="offer">
+            <div class="cardg">
+                <div class="wrap">
+                    <div class="terminal">
+                        <hgroup class="head">
+                            <p class="title">
+                                <svg width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+                                    stroke="currentColor" fill="none">
+                                    <path
+                                        d="M7 15L10 12L7 9M13 15H17M7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V7.8C21 6.11984 21 5.27976 20.673 4.63803C20.3854 4.07354 19.9265 3.6146 19.362 3.32698C18.7202 3 17.8802 3 16.2 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21Z">
+                                    </path>
+                                </svg>
+                                Coupon Terminal
+                            </p>
+
+                            <button class="copy_toggle" tabindex="-1" type="button">
+                                <svg width="16px" height="16px" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
+                                    stroke="currentColor" fill="none">
+                                    <path
+                                        d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2">
+                                    </path>
+                                    <path
+                                        d="M9 3m0 2a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </hgroup>
+
+                        <div class="body">
+                            <pre class="pre">          <code>-&nbsp;</code>
+            <code>npx&nbsp;</code>
+            <code class="cmd" data-cmd="NO-COUPON-NOW"></code>
+          </pre>
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            *Other offers will be mentioned here and also in the homepage.<br>
+            *For over all updates and coupon, subscribe our newsletter or join our newsletter community<br><br>
+            <div class="cardp">
+                <span class="card__title">Newsletter Community</span>
+                <p class="card__content">
+                    Get offers, coupons and sales updates most priorly and never miss a chance!
+                </p>
+                <form action="https://formspree.io/f/mjkgraqj" class="card__form" method="POST" >
+                    <input required="" type="text" placeholder="Your Good Name" name="name"/>
+                    <input required="" type="number" placeholder="Your Whatsapp No." name="Whatsapp"/>
+                    <button class="card__button">Click me</button>
+                </form>
+            </div>
+
+        </section>
+    </center>
+    <br><br>
+    <div class="end-text">
+        <p>©Brigade Store 2025. All Rights Reserved.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
