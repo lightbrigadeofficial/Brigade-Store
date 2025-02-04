@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,51 +11,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" type="image/x-icon" href="Logo.png">
-    <style>
-        .product-list {
-            padding: 5% 10%;
-        }
-
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            /* 6 items per row */
-            gap: 15px;
-            /* Space between items */
-        }
-
-        .product-item {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            text-align: center;
-            padding: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .product-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .product-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .product-details h4 {
-            color: #111;
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        .product-details p {
-            color: #555;
-            font-size: 14px;
-            margin: 0;
-        }
-    </style>
 </head>
 
 <body>
@@ -74,7 +28,6 @@
                 <button id="searchButton"><i class='bx bx-search-alt-2'></i></button>
             </div>
             <a href="#"><i class='bx bx-user'></i></a>
-            <!--<a href="#"><i class='bx bx-cart'></i></a>-->
         </div>
         <div class="product-text">
             <h5>^_~</h5>
@@ -89,43 +42,38 @@
         <div class="close-btn" onclick="toggleSidePanel()">×</div>
         <h2>Categories</h2>
         <ul>
-            <a href="BOOKS.html#SelfHelp">
-                <li>Self Helf</li>
-            </a>
-            <a href="BOOKS.html#Adventure">
-                <li>Adventure</li>
-            </a>
-            <a href="BOOKS.html#Fantasy">
-                <li>Fantasy</li>
-            </a>
-            <a href="BOOKS.html#Fiction">
-                <li>Fiction</li>
-            </a>
-            <a href="BOOKS.html#Horror"><li>Horror</li></a>
-            <a href="BOOKS.html#Romance"><li>Romance</li></a>
-            <a href="BOOKS.html#DarkRomance"><li>Dark Romance</li></a>
-            <a href="BOOKS.html#YA"><li>Young Adult</li></a>
-            <a href="BOOKS.html#Autobiographies"><li>Autobiographies</li></a>
-            <a href="BOOKS.html#Biographies"><li>Biographies</li></a>
-            <a href="BOOKS.html#History"><li>History</li></a>
-            <a href="BOOKS.html#Educational"><li>Educational</li></a>
-            <a href="BOOKS.html#Others"><li>Others</li></a>
+            <li><a href="BOOKS.html#SelfHelp">Self Help</a></li>
+            <li><a href="BOOKS.html#Adventure">Adventure</a></li>
+            <li><a href="BOOKS.html#Fantasy">Fantasy</a></li>
+            <li><a href="BOOKS.html#Fiction">Fiction</a></li>
+            <li><a href="BOOKS.html#Horror">Horror</a></li>
+            <li><a href="BOOKS.html#Romance">Romance</a></li>
+            <li><a href="BOOKS.html#DarkRomance">Dark Romance</a></li>
+            <li><a href="BOOKS.html#YA">Young Adult</a></li>
+            <li><a href="BOOKS.html#Autobiographies">Autobiographies</a></li>
+            <li><a href="BOOKS.html#Biographies">Biographies</a></li>
+            <li><a href="BOOKS.html#History">History</a></li>
+            <li><a href="BOOKS.html#Educational">Educational</a></li>
+            <li><a href="BOOKS.html#Others">Others</a></li>
         </ul>
     </div>
-    <!--SELF HELP-->
+
+    <!-- Product Sections -->
+    <main>
+         <!--SELF HELP-->
     <section class="product-list">
         <section class="SelfHelp" id="SelfHelp"></section>
         Self Help<br><br>
         <div class="product-container">
             <div class="product-item"><a href="SH001.html">
-                <img src="Atomic-Habits-by-James-Clear.jpg" alt="Atomic-Habits-by-James-Clear.jpg">
+                <img src="BookThumbs\Atomic-Habits-by-James-Clear.jpg" alt="Atomic-Habits-by-James-Clear.jpg">
                 <div class="product-details">
                     <h4>Atomic Habits by James Clear</h4>
                     <p>500INR</p>
                 </a></div>
             </div>
             <div class="product-item"><a href="SH002.html">
-                <img src="The-Psychology-Of-Money-By-Morgan-Housel.jpg"
+                <img src="BookThumbs\The-Psychology-Of-Money-By-Morgan-Housel.jpg"
                     alt="The-Psychology-Of-Money-By-Morgan-Housel">
                 <div class="product-details">
                     <h4>The Psychology Of Money By Morgan Housel</h4>
@@ -148,7 +96,7 @@
         Adventure<br><br>
         <div class="product-container">
             <div class="product-item"><a href="AD001.html">
-                <img src="Treasure-Island-By-Robert-Louis-Stevenson.jpg"
+                <img src="BookThumbs\Treasure-Island-By-Robert-Louis-Stevenson.jpg"
                     alt="Treasure-Island-By-Robert-Louis-Stevenson">
                 <div class="product-details">
                     <h4>Treasure Island By Robert Louis Stevenson</h4>
@@ -156,7 +104,7 @@
                 </a></div>
             </div>
             <div class="product-item"><a href="AD002.html">
-                <img src="Harry-Potter-And-the-Philosophers-Stone-By-J.-K.-Rowling.jpg"
+                <img src="BookThumbs\Harry-Potter-And-the-Philosophers-Stone-By-J.-K.-Rowling.jpg"
                     alt="Harry-Potter-And-the-Philosophers-Stone-By-J.-K.-Rowling">
                 <div class="product-details">
                     <h4>[1] Harry Potter And the Philosopher’s Stone By J. K. Rowling</h4>
@@ -164,7 +112,7 @@
                 </a></div>
             </div>
             <div class="product-item"><a href="AD003.html">
-                <img src="Harry-Potter-And-The-Chamber-Of-Secrets-By-J.-K.-Rowling.jpg"
+                <img src="BookThumbs\Harry-Potter-And-The-Chamber-Of-Secrets-By-J.-K.-Rowling.jpg"
                     alt="Harry-Potter-And-The-Chamber-Of-Secrets-By-J.-K.-Rowling">
                 <div class="product-details">
                     <h4>[2] Harry Potter And The Chamber Of Secrets By J. K. Rowling</h4>
@@ -516,14 +464,14 @@
         Biographies<br><br>
         <div class="product-container">
             <div class="product-item"><a href="BI001.html">
-                <img src="Steve-Jobs-By-Walter-Isaacson.jpg" alt="Steve-Jobs-By-Walter-Isaacson">
+                <img src="BookThumbs\Steve-Jobs-By-Walter-Isaacson.jpg" alt="Steve-Jobs-By-Walter-Isaacson">
                 <div class="product-details">
                     <h4>Steve Jobs By Walter Isaacson</h4>
                     <p>500INR</p>
                 </a></div>
             </div>
             <div class="product-item"><a href="BI002.html">
-                <img src="bell-jar.jpeg"
+                <img src="BookThumbs\bell-jar.jpeg"
                     alt="bell-jar">
                 <div class="product-details">
                     <h4>The Bell Jar By Sylvia Plath</h4>
@@ -547,14 +495,14 @@
         History<br><br>
         <div class="product-container">
             <div class="product-item"><a href="HS001.html">
-                <img src="Mossad-By-Michael-Bar-Zohar.jpg" alt="Mossad-By-Michael-Bar-Zohar">
+                <img src="BookThumbs\Mossad-By-Michael-Bar-Zohar.jpg" alt="Mossad-By-Michael-Bar-Zohar">
                 <div class="product-details">
                     <h4>Mossad By Michael Bar-Zohar</h4>
                     <p>500INR</p>
                 </a></div>
             </div>
             <div class="product-item"><a href="HS002.html">
-                <img src="The-Wager-By-David-Grann.jpeg"
+                <img src="BookThumbs\The-Wager-By-David-Grann.jpeg"
                     alt="The-Wager-By-David-Grann">
                 <div class="product-details">
                     <h4>The Wager By David Grann</h4>
@@ -584,14 +532,14 @@
         Educational<br><br>
         <div class="product-container">
             <div class="product-item"><a href="ED001.html">
-                <img src="Mission-NDA.jpg" alt="Mission-NDA">
+                <img src="BookThumbs\Mission-NDA.jpg" alt="Mission-NDA">
                 <div class="product-details">
                     <h4>Mission NDA : Serve At Young Age (National Defence Academy Entrance Examination) | National Defence Academy Khadakwasla</h4>
                     <p>500INR</p>
                 </a></div>
             </div>
             <div class="product-item"><a href="ED002.html">
-                <img src="Mission-CDS.jpg"
+                <img src="BookThumbs\Mission-CDS.jpg"
                     alt="Mission-CDS">
                 <div class="product-details">
                     <h4>Mission CDS : Combined Defence Services Entrance Examination for IMA, INA & AFA </h4>
@@ -623,7 +571,7 @@
             </div>-->
         </div>
     </section>
-
+    </main>
 
     <!-- Footer Section -->
     <section class="contact" id="contact">
@@ -639,14 +587,12 @@
                     <a href="#"><i class='bx bxl-gmail'></i></a>
                 </div>
             </div>
-
             <div class="second-info">
                 <h4>Support</h4>
                 <p><a href="contact.html">Contact Us</a></p>
                 <p><a href="about.html">About Page</a></p>
                 <p><a href="privacypolicy.html">Privacy</a></p>
             </div>
-
             <div class="third-info">
                 <h4>Miscellaneous</h4>
                 <p><a href="https://vandam-sfsguwahati.github.io/sfsncc-digiportal.github.io/aboutthedev.html">About The Developer</a></p>
