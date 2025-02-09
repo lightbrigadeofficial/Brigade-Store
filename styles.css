@@ -17,7 +17,7 @@ body {
 header {
     position: fixed;
     width: 100%;
-    top: 0;
+    top: 5%;
     right: 0;
     z-index: 1000;
     display: flex;
@@ -1656,4 +1656,42 @@ input[type="radio"] {
     .product-details p {
         font-size: 12px; /* Adjust font size */
     }
+}
+/* Ribbon Styling */
+.ribbon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #ff5733, #ff8c00); /* Gradient Ribbon */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1100;
+}
+
+/* Triangular Ribbon Edges */
+.ribbon::before, .ribbon::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    display: block;
+}
+
+.ribbon::before {
+    left: 0;
+    border-color: #ff5733 transparent transparent transparent;
+}
+
+.ribbon::after {
+    right: 0;
+    border-color: #ff8c00 transparent transparent transparent;
 }
