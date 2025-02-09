@@ -457,7 +457,7 @@ header.sticky {
 /* Close button style */
 .close-btn {
     position: absolute;
-    top: 10px;
+    top: 25px;
     right: 25px;
     font-size: 36px;
     cursor: pointer;
@@ -1694,4 +1694,9 @@ input[type="radio"] {
 .ribbon::after {
     right: 0;
     border-color: #ff8c00 transparent transparent transparent;
+}
+.comm{
+    color: white;
+    text-decoration: underline;
+    font-weight: 900;
 }
