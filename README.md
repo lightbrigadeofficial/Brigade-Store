@@ -1,18 +1,18 @@
 # 📌 Project Name  
 A brief description of your project and its purpose.
 
-![Repo Size](https://img.shields.io/github/repo-size/your-username/your-repo)
-![License](https://img.shields.io/github/license/your-username/your-repo)
-![Contributions](https://img.shields.io/badge/contributions-welcome-brightgreen)
+![Repo Size](https://img.shields.io/github/repo-size/lightbrigadeofficial/Brigade-Store)
+![License](https://img.shields.io/github/license/lightbrigadeofficial/Brigade-Store?style=flat)
+
 
 ## 📖 Table of Contents  
-- [About](#about)  
+- [About](README.md#about)  
 - [Features](#features)  
 - [Installation](#installation)  
 - [Usage](#usage)  
 - [Configuration](#configuration)  
 - [Contributing](#contributing)  
-- [License](#license)  
+- [License](README.md#license)  
 - [Acknowledgments](#acknowledgments)  
 
 ---

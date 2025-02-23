@@ -1,3 +1,5 @@
+LICENSE
+
 Copyright 2025 M Vandam Singha & Brigade-Store
 
 This project is licensed under either the Apache License 2.0 or the GNU General Public License v3 (GPLv3).
