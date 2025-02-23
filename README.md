@@ -2,7 +2,7 @@
 A brief description of your project and its purpose.
 
 ![Repo Size](https://img.shields.io/github/repo-size/lightbrigadeofficial/Brigade-Store)
-![License](https://img.shields.io/github/license/lightbrigadeofficial/Brigade-Store?style=flat)
+![License: MIT & GPLv3](https://img.shields.io/badge/License-MIT%20%2B%20GPLv3-green.svg)
 
 
 ## 📖 Table of Contents  
