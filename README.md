@@ -7,21 +7,17 @@ A brief description of your project and its purpose.
 
 ## 📖 Table of Contents  
 - [About](README.md#about)  
-- [Features](#features)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Configuration](#configuration)  
-- [Contributing](#contributing)  
+- [Features](README.md#features)  
 - [License](README.md#license)  
-- [Acknowledgments](#acknowledgments)  
 
 ---
 
-## 🔥 About  
+# 🔥 About  
 A more detailed description of what the project does, its goals, and the problem it solves.
 
-## ✨ Features  
+# ✨ Features  
 Why Us?!
+
 ● We take on-demand orders that is, if you don't find what you look for, you can contact to us about it and it will be added to our store and sold to you exclusively. With exclusive offer like no one else will get for that particular book!
 
 ● Easy Returns, we offer our customers an easy return with full money-back guarantee under *24hour* of order shipped to the customer.
@@ -44,8 +40,8 @@ Why Us?!
 
 ● We have SSL Certified website!
 
-## 🌐 Our Official Website  & Store
-[https://brigade-store.vercel.app/about.html] (https://brigade-store.vercel.app/about.html)
+# 🌐 Website_&_store
+(https://brigade-store.vercel.app/about.html)
 
 
 
@@ -58,7 +54,7 @@ This project is licensed under a **dual license**:
 
 ---
 
-## **🔍 Difference Between MIT & GNU GPLv3**  
+## **🔍 Difference_Between_MIT_&_GNU_GPLv3**  
 
 | Feature       | **MIT License** | **GNU GPLv3** |
 |--------------|---------------|---------------|
@@ -77,4 +73,3 @@ You may **choose** either of these licenses when using this project.
 For the full legal terms, see:  
 - [Apache License 2.0 Full Text](LICENSE-APACHE.md)  
 - [GPLv3 Full Text](LICENSE-GPLv3.md)
-
