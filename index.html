@@ -150,51 +150,6 @@
         <p>©Brigade Store 2025. All Rights Reserved.</p>
     </div>
 
-    <nav class="bottom-nav">
-        <nav class="bottom-nav">
-            <a href="#" id="backBtn"><i class="bx bx-arrow-back"></i> Back</a>
-            <a href="index.html"><i class="bx bx-home"></i> Home</a>
-            <a href="cart.html"><i class="bx bx-cart"></i> Cart</a>
-            <a href="BOOKS.html"><i class='bx bxs-store'></i> Shop</a>
-        </nav>
-        
-    </nav>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth < 768) {
-        // Create the navigation bar dynamically
-        const nav = document.createElement("nav");
-        nav.className = "bottom-nav";
-        nav.innerHTML = `
-            <a href="#" id="backBtn"><i class="bx bx-arrow-back"></i> Back</a>
-            <a href="index.html"><i class="bx bx-home"></i> Home</a>
-            <a href="search.html"><i class="bx bx-search"></i> Search</a>
-            <a href="cart.html"><i class="bx bx-cart"></i> Cart</a>
-            <a href="profile.html"><i class="bx bx-user"></i> Profile</a>
-        `;
-        document.body.appendChild(nav);
-
-        // Get back button
-        const backBtn = document.getElementById("backBtn");
-
-        // Check if there is history to go back
-        if (document.referrer === "" || window.history.length <= 1) {
-            backBtn.style.display = "none"; // Hide back button if no history
-        } else {
-            backBtn.addEventListener("click", function (event) {
-                event.preventDefault();
-                if (document.referrer.includes(window.location.hostname)) {
-                    history.back(); // Go back if it's from the same website
-                } else {
-                    window.location.href = "index.html"; // Fallback to home page
-                }
-            });
-        }
-    }
-});
-
-    </script>
-
     <script src="script.js"></script>
     <script type="module">
         import { inject } from "@vercel/analytics"
