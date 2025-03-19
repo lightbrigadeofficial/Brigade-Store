@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tektur:wght@400..900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -133,10 +133,14 @@ section {
 
 .down-arrow {
     position: absolute;
-    top: 91%;
+    top: 84%;
     right: 09%;
 }
-
+@media (max-width: 768px) {
+    .down-arrow {
+        top: 90%;
+    }
+}
 .down i {
     font-size: 30px;
     color: #2c2c2c;
@@ -1735,4 +1739,36 @@ input[type="radio"] {
   .cssbuttons-io-button:active {
     box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
   }
+  #clock {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Bebas Neue' , sans-serif;
+    position: fixed;
+    top: 35px;
+    right: 20px;
+    background: transparent;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    TRANSFORM: translateX;
+}
 
+@media (max-width: 768px) {
+    #clock {
+        font-size: 20px;
+        /* Adjusts size for smaller screens */
+        top: 35px;
+        right: 10px;
+        padding: 8px 12px;
+    }
+}
+.location {
+    position: relative;
+    bottom: 10%;
+    left: 5%;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    transform: translateX;
+    background-color: transparent;
+}

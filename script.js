@@ -40,3 +40,18 @@ function toggleSidePanel() {
     const sidePanel = document.getElementById('side-panel');
     sidePanel.classList.toggle('open');
 }
+// Local Timer clock
+function updateClock() {
+    let now = new Date();
+    let hours = now.getHours().toString().padStart(2, "0");
+    let minutes = now.getMinutes().toString().padStart(2, "0");
+    let seconds = now.getSeconds().toString().padStart(2, "0");
+    
+    document.getElementById("clock").textContent = `Local/ ${hours}:${minutes}:${seconds}`;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Call once to prevent delay
+updateClock();
