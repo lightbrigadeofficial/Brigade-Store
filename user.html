@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charcet="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Führer</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="icon" type="image/x-icon" href="">
+</head>
+
+<body> 
+    <div id="retro-msg">
+        <p>🔊 The music is muted! Unmute it :<</p>
+        <button onclick="closeRetroMsg()">OK</button>
+      </div>
+         
+<div class="terminal-loader">
+    <div class="terminal-header">
+      <div class="terminal-title">Status</div>
+      <div class="terminal-controls">
+        <div class="control close"></div>
+        <div class="control minimize"></div>
+        <div class="control maximize"></div>
+      </div>
+    </div>
+    <div class="text">Loading...</div>
+  </div>
+
+
+  <audio id="bg-music" autoplay loop muted>
+    <source src="we-dont-talk-anymore-feat-selena-gomez-official-video.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="mute-btn" id="mute-btn" onclick="toggleMute()">
+    🔇
+  </div>
+  
+    <section>
+        
+  <div class="profile">
+    <img src="pfp.jpeg" alt="Profile Picture" class="pfp">
+    <center>M VANDAM SINGHA</center>
+    <p class="info">
+      I is - a coder by passion, a reader by heart.
+      I like the hum of midnight thoughts, the thrill of untold stories, and the quiet power of words.
+      I am up for building dreams, breaking barriers, and chasing the unknown.
+      From pages that whisper wisdom to terminals that blink with possibilities — I belong somewhere in
+      between.
+    </p>
+  </div>
+  </section>
+
+
+
+<script>
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    // Smooth fade-out for loader
+    const loader = document.querySelector(".terminal-loader");
+    if (loader) {
+      loader.style.transition = "opacity 1s ease";
+      loader.style.opacity = "0";
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1000); // After fade-out
+    }
+
+    // Show profile and Spotify card with fade-in
+    const profile = document.querySelector(".profile");
+    const spotifyCard = document.querySelector(".spotify-card");
+    const muteBtn = document.querySelector(".mute-btn");
+    const retroMsg = document.getElementById("retro-msg");
+
+    if (profile) profile.style.display = "block";
+    if (spotifyCard) spotifyCard.style.display = "flex";
+
+    // Show Mute Button with smooth fade-in
+    if (muteBtn) {
+      muteBtn.style.visibility = "visible";
+      muteBtn.style.opacity = "1";
+    }
+
+    // Show Retro Message After Loading
+    if (retroMsg) {
+      retroMsg.style.display = "block";
+      retroMsg.style.transition = "opacity 0.5s ease";
+      setTimeout(() => {
+        retroMsg.style.opacity = "1";
+      }, 100); // Ensure it starts visible
+    }
+  }, 4000); // Adjust to match loader time
+});
+
+// Ensure the audio is ready to play
+function toggleMute() {
+  const audio = document.getElementById('bg-music');
+  const muteBtn = document.getElementById('mute-btn');
+
+  if (!audio || !muteBtn) return;
+
+  // Ensure audio starts playing if not already
+  if (audio.paused) {
+    audio.play().catch(error => console.error('Audio play failed:', error));
+  }
+
+  // Toggle Mute
+  audio.muted = !audio.muted;
+  muteBtn.textContent = audio.muted ? '🔇' : '🔊';
+}
+
+// Close Retro Message
+function closeRetroMsg() {
+  const retroMsg = document.getElementById("retro-msg");
+  if (retroMsg) {
+    retroMsg.style.transition = "opacity 0.5s ease";
+    retroMsg.style.opacity = "0";
+    setTimeout(() => {
+      retroMsg.style.display = "none";
+    }, 500); // Close smoothly
+  }
+}
+</script>
+</body>
+
+</html>

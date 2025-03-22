@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cedarville+Cursive&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Tektur:wght@400..900&display=swap');
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: bisque;
+  }
+  
+  .terminal-loader {
+    border: 0.1em solid #333;
+    background-color: #1a1a1a;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    padding: 1.5em 1em;
+    width: 12em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+ /* Ensure Profile is Hidden Initially */
+.profile {
+    display: none; /* Hidden before loading completes */
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 335px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeInScale 0.8s ease-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .profile {
+      width: 270px;
+      padding: 20px;
+    }
+  }
+  
+  
+  .pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid white;
+  }
+  
+  .info {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+
+
+/* From Uiverse.io by jeremyssocial */ 
+@keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width: 6.2em;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
+  }
+  
+  .terminal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1.5em;
+    background-color: #333;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0 0.4em;
+    box-sizing: border-box;
+  }
+  
+  .terminal-controls {
+    float: right;
+  }
+  
+  .control {
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background-color: #777;
+  }
+  
+  .control.close {
+    background-color: #e33;
+  }
+  
+  .control.minimize {
+    background-color: #ee0;
+  }
+  
+  .control.maximize {
+    background-color: #0b0;
+  }
+  
+  .terminal-title {
+    float: left;
+    line-height: 1.5em;
+    color: #eee;
+  }
+  
+  .text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid green; /* Cursor */
+    font-family: 'Bebas Neue' , sans-serif;
+    font-size: 1.5rem;
+    animation:
+      typeAndDelete 4s steps(11) infinite,
+      blinkCursor 0.5s step-end infinite alternate;
+    margin-top: 1.5em;
+  }
+  
+  .mute-btn {
+    opacity: 0; /* Make it transparent initially */
+    visibility: hidden; /* Prevent interactions before showing */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, opacity 0.5s ease;
+  }
+  
+  .mute-btn:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+  
+/* Retro 90s Message Box */
+#retro-msg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Bebas Neue' , sans-serif;
+    font-size: 2rem;
+    padding: 20px;
+    width: 320px;
+    border: 3px solid #0f0;
+    box-shadow: 0 8px 16px rgba(0, 255, 0, 0.8);
+    text-align: center;
+    z-index: 9999;
+    border-radius: 8px;
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Close Button */
+  #retro-msg button {
+    background-color: #0f0;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Bebas Neue' , sans-serif;
+  }
+  
+  #retro-msg button:hover {
+    background-color: #00ff00c7;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -55%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
