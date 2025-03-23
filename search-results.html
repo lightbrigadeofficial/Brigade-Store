@@ -20,7 +20,30 @@
 
     <script>
         const query = new URLSearchParams(window.location.search).get('q');
-        const resultsContainer = document.getElementById('results-container');
+  const resultsContainer = document.getElementById('results-container');
+  const searchInput = document.getElementById('search-input');
+
+// Populate search field if there's an existing query
+  if (query) {
+    searchInput.value = query;
+  }
+
+  // Event listener for Enter key
+  searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      performSearch();
+    }
+  });
+
+  // Perform search function
+  function performSearch() {
+    const query = searchInput.value.trim();
+    if (!query) {
+      resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+      return;
+    }
+    window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+  }
 
         // Mock data - Replace with actual content fetching logic
         const siteContent = [
@@ -80,27 +103,33 @@
         ];
 
         if (query) {
-            const lowerCaseQuery = query.toLowerCase();
-            const results = siteContent.filter(item =>
-                item.title.toLowerCase().includes(lowerCaseQuery) ||
-                item.content.toLowerCase().includes(lowerCaseQuery)
-            );
+  const lowerCaseQueryWords = query.toLowerCase().split(/\s+/); // Split query into words
 
-            if (results.length > 0) {
-                results.forEach(result => {
-                    const resultItem = document.createElement('div');
-                    resultItem.innerHTML = `
-                        <h3><a href="${result.url}">${result.title}</a></h3>
-                        <p>${result.content}</p>
-                    `;
-                    resultsContainer.appendChild(resultItem);
-                });
-            } else {
-                resultsContainer.innerHTML = '<p>No results found.</p>';
-            }
-        } else {
-            resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
-        }
+  const results = siteContent.filter(item => {
+    const titleWords = item.title.toLowerCase().split(/\s+/);
+    const contentWords = item.content.toLowerCase().split(/\s+/);
+
+    // Check if ANY word from the query matches ANY word from title or content
+    return lowerCaseQueryWords.some(word =>
+      titleWords.includes(word) || contentWords.includes(word)
+    );
+  });
+
+  if (results.length > 0) {
+    results.forEach(result => {
+      const resultItem = document.createElement('div');
+      resultItem.innerHTML = `
+        <h3><a href="${result.url}">${result.title}</a></h3>
+        <p>${result.content}</p>
+      `;
+      resultsContainer.appendChild(resultItem);
+    });
+  } else {
+    resultsContainer.innerHTML = '<p>No results found.</p>';
+  }
+} else {
+  resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+}
     </script>
 </body>
 
