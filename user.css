@@ -236,3 +236,17 @@ body, html {
     }
   }
   
+  .header{
+    background-color: bisque;
+    display: flex;
+    gap: 45px;
+    text-decoration: none;
+    padding-left: 60px;
+    padding-top: 15px;
+  }
+  .header a{
+    color: black;
+    font-family: 'Bebas Neue' , sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }

@@ -13,12 +13,11 @@
     <link rel="icon" type="image/x-icon" href="pfp.jpeg">
 </head>
 
-<body> 
-    <div id="retro-msg">
-        <p>🔊 The music is muted! Unmute it :<</p>
-        <button onclick="closeRetroMsg()">OK</button>
-      </div>
-         
+<body>    
+  <header class="header">
+    <a href="index.html">Back To Home</a>
+    <a href="BOOKS.html">Shop</a>
+  </header>    
 <div class="terminal-loader">
     <div class="terminal-header">
       <div class="terminal-title">Status</div>
@@ -30,16 +29,7 @@
     </div>
     <div class="text">Loading...</div>
   </div>
-
-
-  <audio id="bg-music" autoplay loop muted>
-    <source src="we-dont-talk-anymore-feat-selena-gomez-official-video.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
   
-  <div class="mute-btn" id="mute-btn" onclick="toggleMute()">
-    🔇
-  </div>
   
     <section>
         
@@ -57,75 +47,34 @@
   </section>
 
 
-
-<script>
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    // Smooth fade-out for loader
-    const loader = document.querySelector(".terminal-loader");
-    if (loader) {
-      loader.style.transition = "opacity 1s ease";
-      loader.style.opacity = "0";
+  <script>
+    window.addEventListener("load", function () {
       setTimeout(() => {
-        loader.style.display = "none";
-      }, 1000); // After fade-out
-    }
-
-    // Show profile and Spotify card with fade-in
-    const profile = document.querySelector(".profile");
-    const spotifyCard = document.querySelector(".spotify-card");
-    const muteBtn = document.querySelector(".mute-btn");
-    const retroMsg = document.getElementById("retro-msg");
-
-    if (profile) profile.style.display = "block";
-    if (spotifyCard) spotifyCard.style.display = "flex";
-
-    // Show Mute Button with smooth fade-in
-    if (muteBtn) {
-      muteBtn.style.visibility = "visible";
-      muteBtn.style.opacity = "1";
-    }
-
-    // Show Retro Message After Loading
-    if (retroMsg) {
-      retroMsg.style.display = "block";
-      retroMsg.style.transition = "opacity 0.5s ease";
-      setTimeout(() => {
-        retroMsg.style.opacity = "1";
-      }, 100); // Ensure it starts visible
-    }
-  }, 4000); // Adjust to match loader time
-});
-
-// Ensure the audio is ready to play
-function toggleMute() {
-  const audio = document.getElementById('bg-music');
-  const muteBtn = document.getElementById('mute-btn');
-
-  if (!audio || !muteBtn) return;
-
-  // Ensure audio starts playing if not already
-  if (audio.paused) {
-    audio.play().catch(error => console.error('Audio play failed:', error));
-  }
-
-  // Toggle Mute
-  audio.muted = !audio.muted;
-  muteBtn.textContent = audio.muted ? '🔇' : '🔊';
-}
-
-// Close Retro Message
-function closeRetroMsg() {
-  const retroMsg = document.getElementById("retro-msg");
-  if (retroMsg) {
-    retroMsg.style.transition = "opacity 0.5s ease";
-    retroMsg.style.opacity = "0";
-    setTimeout(() => {
-      retroMsg.style.display = "none";
-    }, 500); // Close smoothly
-  }
-}
-</script>
+        // Smooth fade-out for loader
+        const loader = document.querySelector(".terminal-loader");
+        if (loader) {
+          loader.style.transition = "opacity 1s ease";
+          loader.style.opacity = "0";
+          setTimeout(() => {
+            loader.style.display = "none";
+          }, 1000); // After fade-out
+        }
+    
+        // Show profile and Spotify card with fade-in
+        const profile = document.querySelector(".profile");
+        const spotifyCard = document.querySelector(".spotify-card");
+        const muteBtn = document.querySelector(".mute-btn");
+        const retroMsg = document.getElementById("retro-msg");
+    
+        if (profile) profile.style.display = "block";
+        if (spotifyCard) spotifyCard.style.display = "flex";
+        if (muteBtn) muteBtn.style.display = "block";
+        if (retroMsg) retroMsg.style.display = "block";
+    
+      }, 3500);
+    });
+    </script>
+    
 </body>
 
 </html>

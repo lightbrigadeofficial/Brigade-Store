@@ -19,25 +19,28 @@
     </section>
 
     <script>
-        const query = new URLSearchParams(window.location.search).get('q');
+ // Ensure DOM content is loaded before accessing elements
+document.addEventListener('DOMContentLoaded', () => {
+  const query = new URLSearchParams(window.location.search).get('q');
   const resultsContainer = document.getElementById('results-container');
   const searchInput = document.getElementById('search-input');
 
-// Populate search field if there's an existing query
-  if (query) {
+  // Check and set query in the input field
+  if (query && searchInput) {
     searchInput.value = query;
   }
 
-  // Event listener for Enter key
-  searchInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-      performSearch();
-    }
-  });
+  // Perform search when Enter is pressed
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    });
+  }
 
-  // Perform search function
   function performSearch() {
-    const query = searchInput.value.trim();
+    const query = searchInput ? searchInput.value.trim() : '';
     if (!query) {
       resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
       return;
@@ -45,8 +48,15 @@
     window.location.href = `search.html?q=${encodeURIComponent(query)}`;
   }
 
-        // Mock data - Replace with actual content fetching logic
-        const siteContent = [
+  // Perform search if Enter is hit
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter' && (!searchInput || document.activeElement !== searchInput)) {
+      performSearch();
+    }
+  });
+
+  // Mock data - Replace with actual content fetching logic
+  const siteContent = [
             { title: "Shop Page", url: "store.html", content: "Explore our products and deals." },
             { title: "Contact Page", url: "index.html#contact", content: "Get in touch with us." },
             { title: "Atomic Habits by James Clear", url: "SH001.html", content: "Atomic Habits by James Clear" },
@@ -92,44 +102,40 @@
             { title: "Mossad Exodus By Gad Shimron", url: "HS003.html", content: "Mossad Exodus By Gad Shimron" },
             { title: "Mission NDA", url: "ED001.html", content: "Mission NDA" },
             { title: "Mission CDS", url: "ED002.html", content: "Mission CDS" },
+            { title: "The Subtle Art Of Not Giving A Fuck By Mark Manson", url: "SH007.html", content: "The Subtle Art Of Not Giving A Fuck By Mark Manson" },
+            { title: "Rich Dad Poor Dad By Robert T. Kiyosaki", url: "SH008.html", content: "Rich Dad Poor Dad By Robert T. Kiyosaki" },
+            { title: "Act Like A Lady Think Like A Man By Steve Harvey", url: "SH009.html", content: "Act Like A Lady Think Like A Man By Steve Harvey" },
+            { title: "Dopamine Detox By Thibaut Meurisse", url: "SH010.html", content: "Dopamine Detox By Thibaut Meurisse" },
+            { title: "[B/W] The 48 Laws Of Power By Robert Greene", url: "SH011.html", content: "[B/W] The 48 Laws Of Power By Robert Greene" },
+            { title: "Good Vibes, Good Life By Vex King", url: "SH012.html", content: "Good Vibes, Good Life By Vex King" },
             { title: "#", url: "#", content: "#" },
             { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-            { title: "#", url: "#", content: "#" },
-        ];
+  ];
 
-        if (query) {
-  const lowerCaseQueryWords = query.toLowerCase().split(/\s+/); // Split query into words
+  if (query) {
+    const lowerCaseQuery = query.toLowerCase();
 
-  const results = siteContent.filter(item => {
-    const titleWords = item.title.toLowerCase().split(/\s+/);
-    const contentWords = item.content.toLowerCase().split(/\s+/);
-
-    // Check if ANY word from the query matches ANY word from title or content
-    return lowerCaseQueryWords.some(word =>
-      titleWords.includes(word) || contentWords.includes(word)
+    // Filter results using includes for partial matching
+    const results = siteContent.filter(item =>
+      item.title.toLowerCase().includes(lowerCaseQuery) ||
+      item.content.toLowerCase().includes(lowerCaseQuery)
     );
-  });
 
-  if (results.length > 0) {
-    results.forEach(result => {
-      const resultItem = document.createElement('div');
-      resultItem.innerHTML = `
-        <h3><a href="${result.url}">${result.title}</a></h3>
-        <p>${result.content}</p>
-      `;
-      resultsContainer.appendChild(resultItem);
-    });
+    // Display Results
+    if (results.length > 0) {
+      resultsContainer.innerHTML = results.map(result => `
+        <div>
+          <h3><a href="${result.url}">${result.title}</a></h3>
+          <p>${result.content}</p>
+        </div>
+      `).join('');
+    } else {
+      resultsContainer.innerHTML = '<p>No results found.</p>';
+    }
   } else {
-    resultsContainer.innerHTML = '<p>No results found.</p>';
+    resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
   }
-} else {
-  resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
-}
+});
     </script>
 </body>
 
