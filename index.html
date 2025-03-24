@@ -11,11 +11,41 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="icon" type="image/x-icon" href="Logo.png">
+    <style>
+        .tooltip-unikorn {
+            visibility: hidden;
+            width: 240px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            position: absolute;
+            z-index: 1;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
 
+        .product-item:hover .tooltip-unikorn {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .product-item {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .product-details {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="ribbon">🔥Join Free Community | <a href="https://nas.io/brigade-store.memberships.in" class="comm"> Click here</a></div>
+    <div class="ribbon">🔥Join Free Community | <a href="https://nas.io/brigade-store.memberships.in" class="comm">
+            Click here</a></div>
     <header><br><br>
         <a href="index.html" class="logo"><img src="Logo.png" alt="Brigade Store"></a>
         <ul class="navmenu">
@@ -88,16 +118,18 @@
             <p>"Information Is Wealth"</p>
 
             <a href="BOOKS.html" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt'></i></a><br><br>
-           <button class="cssbuttons-io-button" id="downloadBtn">
+            <button class="cssbuttons-io-button" id="downloadBtn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                  <path fill="none" d="M0 0h24v24H0z"></path>
-                  <path fill="currentColor" d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z">
+                    </path>
                 </svg>
-                <span>The Downlaod Is Ceased :<</span>
+                <span>The Downlaod Is Ceased :<< /span>
             </button>
-            
-  
-          <br>  <i>*The app has been ceased due to technical miss-alignment. Will be available momentarily.</i>
+
+
+            <br> <i>*The app has been ceased due to technical miss-alignment. Will be available momentarily.</i>
         </div>
         <div class="down-arrow">
             <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
@@ -106,15 +138,42 @@
     </section><br><br><br>
 
     <!--TRENDING SECTION-->
-    <section class="tending-product" id="trending">
+    <section class="product-list">
+        <section class="SelfHelp" id="ep"></section>
         <div class="center-text">
-            <h2>Our Trending <span>Products</span></h2>
+            <h2>Vandam's <span>Curated Pick</span></h2>
         </div>
+        <div class="product-container">
 
-        <div class="products">
-            Not Avaiable For Now ≧ ﹏ ≦
+            <div class="product-item">
+                <a href="SH014.html">
+                    <img src="Cantt-Hurt-Me-By-David-Goggins.jpg" alt="Cantt-Hurt-Me-By-David-Goggins">
+                    <div class="product-details">
+                        <h4>Can't Hurt Me By David Goggins</h4>
+                        <p>182 INR</p>
+                        <div class="tooltip-unikorn">A Story of a former NAVY SEAL about mental toughness,
+                            self-discipline and resilience. Recommended for building mental grit and those aspiring for
+                            Peak military dedicated life, professionals, entrepreneurs, students and disciplined
+                            personality.</div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="product-item">
+                <a href="SH002.html">
+                    <img src="The-Psychology-Of-Money-By-Morgan-Housel.jpg"
+                        alt="The-Psychology-Of-Money-By-Morgan-Housel">
+                    <div class="product-details">
+                        <h4>The Psychology Of Money By Morgan Housel</h4>
+                        <p>140 INR</p>
+                        <div class="tooltip-unikorn">Learn the behavioral aspects of wealth and financial decisions.
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
+
 
     <!--FOOTER SECTION-->
     <section class="contact" id="contact">
@@ -154,13 +213,13 @@
     <script src="script.js"></script>
     <script type="module">
         import { inject } from "@vercel/analytics"
-      </script>
-      <script>
+    </script>
+    <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/speed-insights/script.js"></script>
-                  
-      <!--<script>
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+
+    <!--<script>
         document.getElementById("downloadBtn").addEventListener("click", function() {
             var link = document.createElement("a");
             link.href = "NULL";  // Replace with actual APK URL
@@ -170,7 +229,7 @@
             document.body.removeChild(link);
         });
         </script>-->
-      
+
 </body>
 
 </html>
